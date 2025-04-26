@@ -1,0 +1,65 @@
+.tagcloud {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+}
+
+.tagcloud--item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: default;
+  transition: transform 0.1s linear, opacity 0.3s ease, filter 0.3s ease;
+  will-change: transform, opacity, filter;
+}
+
+.tagcloud--item[style*='z-index: -'] {
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+.tagcloud--item[style*='z-index: -'][style*='z-index: -1'],
+.tagcloud--item[style*='z-index: -'][style*='z-index: -2'],
+.tagcloud--item[style*='z-index: -'][style*='z-index: -3'] {
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+.tagcloud--item[style*='z-index: -'][style*='z-index: -4'],
+.tagcloud--item[style*='z-index: -'][style*='z-index: -5'] {
+  filter: blur(3px);
+  opacity: 0.3;
+}
+
+.bg-dark {
+  background-color: #1c1f26;
+}
+
+.bg-dark-transparent {
+  background-color: rgba(28, 31, 38, 0.5);
+}
+
+.bg-darker {
+  background-color: #2a2d37;
+}
+
+.border-primary-30 {
+  border-color: rgba(199, 120, 221, 0.3);
+}
+
+.border-primary-20 {
+  border-color: rgba(199, 120, 221, 0.2);
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #1c1f26;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #c778dd;
+  border-radius: 6px;
+} 
