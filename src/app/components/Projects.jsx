@@ -118,7 +118,7 @@ const Projects = () => {
             >
               <span className="text-[#C778DD]">#</span>projects
             </motion.h2>
-            <div className="h-[2px] sm:h-[3px] w-40 sm:w-96 md:w-[30rem] lg:w-[40rem] bg-[#C778DD]"></div>
+            <div className="h-[2px] sm:h-[3px] w-60 sm:w-96 md:w-[30rem] lg:w-[40rem] bg-[#C778DD]"></div>
           </motion.div>
         </div>
         
