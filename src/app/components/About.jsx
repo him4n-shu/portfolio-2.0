@@ -344,7 +344,7 @@ const About = () => {
             )}
           </motion.div>
           
-          <div className="relative mx-auto lg:mx-0 max-w-lg w-full">
+          <div className="relative mx-auto lg:mx-0 max-w-md w-full">  {/* Reduced from max-w-lg to max-w-md */}
             <div className="relative z-10">
               <motion.div 
                 className="relative overflow-hidden"
@@ -355,7 +355,7 @@ const About = () => {
                 <img 
                   src="/assets/images/dp/profile-pic.png" 
                   alt="Developer profile" 
-                  className="w-full h-auto object-cover"
+                  className="w-4/5 h-auto object-cover mx-auto"
                   style={{ filter: 'brightness(0.8) contrast(1.1)' }}
                 />
               </motion.div>
@@ -420,4 +420,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;

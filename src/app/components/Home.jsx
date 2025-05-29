@@ -160,7 +160,7 @@ const Home = () => {
           
           {/* Right content - Image */}
           <motion.div 
-            className="w-full lg:w-1/2 relative px-4 py-6 lg:p-32 lg:pt-8"
+            className="w-full lg:w-1/2 relative px-2 py-4 lg:p-24 lg:pt-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -212,9 +212,9 @@ const Home = () => {
                   <Image 
                     src="/assets/images/dp/profile_pic.png"
                     alt="Himanshu Kumar" 
-                    width={400} 
-                    height={500}
-                    className="rounded-sm w-full h-auto max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] mx-auto"
+                    width={500} 
+                    height={600}
+                    className="rounded-sm w-full h-auto max-w-[400px] sm:max-w-[450px] lg:max-w-[500px] mx-auto"
                     priority
                   />
                   
@@ -251,7 +251,7 @@ const Home = () => {
                 
                 {/* Dot pattern */}
                 <motion.div 
-                  className="absolute bottom-8 sm:bottom-12 right-4 sm:right-10 grid grid-cols-4 sm:grid-cols-6 gap-1 sm:gap-2 hidden sm:grid"
+                  className="absolute bottom-8 sm:bottom-12 right-4 sm:right-10 hidden sm:flex sm:grid-cols-6 grid-cols-4 gap-1 sm:gap-2"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 1 }}
@@ -319,4 +319,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;
