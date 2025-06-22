@@ -1,10 +1,9 @@
 # 💼 Himanshu's Portfolio
 
 <div align="center">
-  <img src="public/assets/images/dp/profile_pic.png" alt="Himanshu Kumar" width="150" style="border-radius: 50%;" />
   <h3>Full-Stack Developer | Web Designer | AI/ML Enthusiast</h3>
   
-  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://portfolio-2-0-himanshu.vercel.app/)
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://itshim4nshu.vercel.app/)
   [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/him4n-shu/portfolio-2.0)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-informational?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/himanshu-kumar-b4b799208)
 </div>
