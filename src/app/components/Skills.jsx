@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styles/skills.css';
+import PageTransition from './PageTransition';
 
 const Skills = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -181,81 +182,83 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="min-h-screen py-12 sm:py-16 md:py-20 bg-dark overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12 md:mb-16 pl-4 sm:pl-6 md:pl-8 lg:pl-12">
-          <motion.h2
-            className="text-2xl sm:text-3xl md:text-4xl font-bold"
-            variants={titleVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <span className="text-[#c778dd]">#</span>skills
-          </motion.h2>
-          <div className="h-[2px] sm:h-[3px] w-60 sm:w-96 md:w-[30rem] lg:w-[40rem] bg-[#c778dd]"></div>
-        </div>
-        <div className="relative flex flex-col lg:flex-row">
-          {/* Only show tag cloud on non-mobile devices */}
-          {!isMobile && isMounted && (
-            <div className="w-full lg:w-5/12 relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] mb-8 lg:mb-0">
-              <div
-                ref={tagCloudRef}
-                className="tagcloud w-full h-full"
-                style={{
-                  color: '#fff',
-                  fontWeight: 'bold',
-                  fontSize: '0.8rem',
-                  fontFamily: 'Inter, sans-serif',
-                }}
-              />
-            </div>
-          )}
+    <PageTransition id="skills">
+      <section id="skills" className="min-h-screen py-12 sm:py-16 md:py-20 bg-dark overflow-hidden">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12 md:mb-16 pl-4 sm:pl-6 md:pl-8 lg:pl-12">
+            <motion.h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold"
+              variants={titleVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <span className="text-[#c778dd]">#</span>skills
+            </motion.h2>
+            <div className="h-[2px] sm:h-[3px] w-60 sm:w-96 md:w-[30rem] lg:w-[40rem] bg-[#c778dd]"></div>
+          </div>
+          <div className="relative flex flex-col lg:flex-row">
+            {/* Only show tag cloud on non-mobile devices */}
+            {!isMobile && isMounted && (
+              <div className="w-full lg:w-5/12 relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] mb-8 lg:mb-0">
+                <div
+                  ref={tagCloudRef}
+                  className="tagcloud w-full h-full"
+                  style={{
+                    color: '#fff',
+                    fontWeight: 'bold',
+                    fontSize: '0.8rem',
+                    fontFamily: 'Inter, sans-serif',
+                  }}
+                />
+              </div>
+            )}
 
-          {/* Skills Grid - full width on mobile */}
-          <div className={`w-full ${isMobile ? 'w-full' : 'lg:w-7/12'}`}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {categorizedSkills.map((category, categoryIndex) => (
-                <div 
-                  key={categoryIndex}
-                  className="border border-gray-700 bg-dark-transparent backdrop-blur-sm p-2 sm:p-3 rounded-md"
-                  data-aos="fade-up" 
-                  data-aos-delay={categoryIndex * 100}
-                >
-                  <h3 className="text-base sm:text-lg font-medium mb-2 text-white border-b border-gray-700 pb-1 sm:pb-2">
-                    {category.category}
-                  </h3>
-                  
-                  <div className="grid grid-cols-3 gap-1 sm:gap-2">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div 
-                        key={skillIndex}
-                        className="flex flex-col items-center justify-center p-1 sm:p-1.5 transition-all duration-300 hover:scale-110"
-                        data-aos="fade-up"
-                        data-aos-delay={categoryIndex * 100 + skillIndex * 50}
-                      >
-                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#24272F] rounded-lg flex items-center justify-center mb-1 sm:mb-1.5 shadow-lg transition-all duration-300 hover:shadow-[#C778DD]/20 hover:shadow-lg">
-                          <img 
-                            src={skill.icon} 
-                            alt={skill.name} 
-                            className="w-3 h-3 sm:w-4 sm:h-4"
-                            onError={(e) => {
-                              e.target.onerror = null;
-                              e.target.src = "/assets/icons/default.svg";
-                            }}
-                          />
+            {/* Skills Grid - full width on mobile */}
+            <div className={`w-full ${isMobile ? 'w-full' : 'lg:w-7/12'}`}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                {categorizedSkills.map((category, categoryIndex) => (
+                  <div 
+                    key={categoryIndex}
+                    className="border border-gray-700 bg-dark-transparent backdrop-blur-sm p-2 sm:p-3 rounded-md"
+                    data-aos="fade-up" 
+                    data-aos-delay={categoryIndex * 100}
+                  >
+                    <h3 className="text-base sm:text-lg font-medium mb-2 text-white border-b border-gray-700 pb-1 sm:pb-2">
+                      {category.category}
+                    </h3>
+                    
+                    <div className="grid grid-cols-3 gap-1 sm:gap-2">
+                      {category.skills.map((skill, skillIndex) => (
+                        <div 
+                          key={skillIndex}
+                          className="flex flex-col items-center justify-center p-1 sm:p-1.5 transition-all duration-300 hover:scale-110"
+                          data-aos="fade-up"
+                          data-aos-delay={categoryIndex * 100 + skillIndex * 50}
+                        >
+                          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#24272F] rounded-lg flex items-center justify-center mb-1 sm:mb-1.5 shadow-lg transition-all duration-300 hover:shadow-[#C778DD]/20 hover:shadow-lg">
+                            <img 
+                              src={skill.icon} 
+                              alt={skill.name} 
+                              className="w-3 h-3 sm:w-4 sm:h-4"
+                              onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = "/assets/icons/default.svg";
+                              }}
+                            />
+                          </div>
+                          <span className="text-[10px] sm:text-xs text-gray-400 text-center">{skill.name}</span>
                         </div>
-                        <span className="text-[10px] sm:text-xs text-gray-400 text-center">{skill.name}</span>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </PageTransition>
   );
 };
 
