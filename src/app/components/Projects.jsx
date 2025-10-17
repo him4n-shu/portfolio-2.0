@@ -19,6 +19,22 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
+      title: "Veritas AI",
+      description: "Advanced AI-powered deepfake video detection system with blockchain verification",
+      detailedDescription: "Veritas AI is a cutting-edge deepfake detection system that uses an ensemble of 7 EfficientNet-B7 models to identify manipulated videos with 94.5% accuracy. The platform provides real-time video analysis, blockchain-based verification hashes, and comprehensive audit trails. Built with a modern React frontend and FastAPI backend, it features user management, verification history, and detailed confidence scoring to combat misinformation and ensure content authenticity.",
+      skills: ["Python", "FastAPI", "React", "PyTorch", "EfficientNet", "MTCNN", "OpenCV", "JavaScript", "Tailwind CSS", "Framer Motion", "Blockchain", "Machine Learning"],
+      image: "/assets/images/project_image/veritas-ai/vai1.png",
+      screenshots: [
+        "/assets/images/project_image/veritas-ai/vai1.png",
+        "/assets/images/project_image/veritas-ai/vai2.png",
+        "/assets/images/project_image/veritas-ai/vai3.png",
+        "/assets/images/project_image/veritas-ai/vai4.png"
+      ],
+      liveLink: "https://cyber-veritasai.vercel.app/",
+      codeLink: "https://github.com/him4n-shu/Viratas-AI-DeepFake-Video-Detector"
+    },
+    {
+      id: 2,
       title: "Comic Crafter AI",
       description: "AI-powered comic strip generator with custom characters",
       detailedDescription: "Comic Crafter AI is an innovative platform that leverages artificial intelligence to transform text prompts into visually appealing comic strips. Users can create custom characters, define scenes, and generate entire comic narratives through intuitive prompts. The platform uses advanced image generation models to ensure high-quality, consistent character appearances across panels.",
@@ -35,7 +51,7 @@ const Projects = () => {
       codeLink: "https://github.com/him4n-shu/comic_crafter_ai_using_LLM"
     },
     {
-      id: 2,
+      id: 3,
       title: "BharatGPT",
       description: "Language model fine-tuned for Indian languages and context",
       detailedDescription: "BharatGPT is a specialized language model fine-tuned specifically for Indian languages and cultural contexts. It supports multiple Indian languages including Hindi, Tamil, Bengali, and more, providing accurate translations, contextual understanding, and culturally relevant responses. The model is optimized to understand and generate content that reflects the linguistic nuances and cultural references unique to India.",
@@ -69,14 +85,13 @@ const Projects = () => {
       codeLink: "https://github.com/him4n-shu/moment"
     },
     {
-      id: 3,
+      id: 5,
       title: "StreamNest",
       description: "Video streaming platform with social features",
       detailedDescription: "StreamNest is a comprehensive video streaming platform that combines high-quality content delivery with robust social features. Users can watch their favorite shows and movies while interacting with other viewers through comments, ratings, and shared watchlists. The platform includes personalized recommendations, watch parties, and integrated social sharing to create a community-focused streaming experience.",
       skills: ["React.js", "Tailwind CSS", "Framer Motion", "API", "JavaScript"],
-      image: "/assets/images/project_image/stream-nest/sn1.png",
+      image: "/assets/images/project_image/stream-nest/sn2.png",
       screenshots: [
-        "/assets/images/project_image/stream-nest/sn1.png",
         "/assets/images/project_image/stream-nest/sn2.png",
         "/assets/images/project_image/stream-nest/sn3.png",
         "/assets/images/project_image/stream-nest/sn4.png",
@@ -86,14 +101,13 @@ const Projects = () => {
       codeLink: "https://github.com/him4n-shu/Stream_Nest"
     },
     {
-      id: 5,
+      id: 6,
       title: "MangaMecca",
       description: "E-commerce platform for manga enthusiasts with seamless shopping experience",
       detailedDescription: "MangaMecca is a specialized e-commerce platform built for manga enthusiasts. The site offers a vast collection of manga titles, merchandise, and collectibles with an intuitive shopping experience. Features include detailed product listings, user reviews, personalized recommendations, secure payment processing, and order tracking. The platform's design is inspired by manga aesthetics while maintaining a clean, user-friendly interface.",
       skills: ["Next.js", "Redux", "Stripe", "Firebase", "Tailwind CSS", "Framer Motion"],
-      image: "/assets/images/project_image/manga-mecca/mm1.png",
+      image: "/assets/images/project_image/manga-mecca/mm2.png",
       screenshots: [
-        "/assets/images/project_image/manga-mecca/mm1.png",
         "/assets/images/project_image/manga-mecca/mm2.png",
         "/assets/images/project_image/manga-mecca/mm3.png",
         "/assets/images/project_image/manga-mecca/mm4.png",

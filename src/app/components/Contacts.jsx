@@ -33,14 +33,15 @@ const Contacts = () => {
       from_email: form.email,
       message: form.message,
       to_name: "Himanshu",
-      reply_to: form.email
+      reply_to: form.email,
+      time: new Date().toLocaleString() 
     };
 
     emailjs.send(
-      'service_02yj8j1', 
-      'template_ze0jqvb', 
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, 
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, 
       templateParams,
-      'kXx-F1fn8qUueTUfn'
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
     )
       .then(() => {
         setLoading(false);
